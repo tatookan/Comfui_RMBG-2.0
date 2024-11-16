@@ -2,18 +2,13 @@
 ## Overview
 RMBG 2.0 is an advanced background removal node designed for use in image processing pipelines. It leverages the briaai/RMBG-2.0 model from Hugging Face to perform high-quality background removal and provides various preprocessing options to enhance the final output.
 
-## Features
-### Background Removal: Remove the background from images using a state-of-the-art segmentation model.
-### Preprocessing Options: Resize, crop, and adjust the image before background removal.
-### Mask Inversion: Option to invert the generated mask for different use cases.
-### Feathering and Dilation: Apply feathering and dilation to the mask for smoother transitions and better blending.
-### CUDA Support: Utilize GPU acceleration for faster processing.
+
 
 ## Installation
 ### Clone the Repository:
 
 bash
-git clone 
+git clone https://github.com/tatookan/Comfui_RMBG-2.0 
 ### Install Dependencies:
 
 bash
@@ -24,17 +19,12 @@ pip install -r requirements.txt
 ### Node Configuration
 The RMBG 2.0 node can be configured with the following parameters:
 
-Image: Input image for background removal.
-Resize Width: Target width for resizing the image. Set to 0 for no resizing.
-Resize Height: Target height for resizing the image. Set to 0 for no resizing.
 Resize Mode:
 none: No resizing or cropping.
-longest_edge: Proportional scaling to fit the longest edge.
-center_crop: Center cropping with specified width and height.
 Invert Mask: Whether to invert the mask colors.
 Feather Amount: Radius for feathering the mask, in pixels.
 Dilate Amount: Radius for dilating the mask, in pixels.
-
+process res:Image scaling specifies the resolution, the maximum value of the test is 1024, adjusting this value will have different results.
 
 ## Model Details
 ### Model Name: briaai/RMBG-2.0
